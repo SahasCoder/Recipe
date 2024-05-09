@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Recipes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+      scroll-behavior: smooth; /* Add smooth scrolling behavior */
+    }
+    header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 20px;
+      transition: color 0.3s; /* Add transition effect */
+    }
+    nav a:hover {
+      background-color: #f0f0f0;
+      color: #000000; /* Change color on hover */
+      
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .recipe {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative; /* Added for positioning the overlay */
+      background-repeat: no-repeat; /* Prevent background image from repeating */
+      background-size: cover;
+      background-position: center;
+    }
+    .recipe::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.642); /* White overlay with reduced opacity */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+    .recipe h3 {
+      position: relative; /* Ensure heading is above overlay */
+      z-index: 1; /* Ensure heading is above overlay */
+      color: #ffffff;
+    }
+    .recipe p {
+      position: relative; /* Ensure paragraph is above overlay */
+      z-index: 1; /* Ensure paragraph is above overlay */
+      color: #ffffffbc;
+    }
+    .recipe img {
+      position: relative; /* Ensure image is above overlay */
+      z-index: 1; /* Ensure image is above overlay */
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+      opacity: 0.8; /* Reduced opacity to make image slightly visible */
+    }
+    .dark-mode-button {
+      background-color: #7289da;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .dark-mode-button:hover {
+      background-color: #4e5d94;
+    }
+    .dark-mode {
+      background-color: #36393f;
+      color: #fff;
+    }
+    .dark-mode header {
+      background-color: #2f3136;
+      color: #fff;
+    }
+    .dark-mode nav a {
+      color: #ddd;
+    }
+    .dark-mode nav a:hover {
+      background-color: #292b2f;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Super Recipes</h1>
+  <button class="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#breakfast">Breakfast</a>
+  <a href="#lunch">Lunch</a>
+  <a href="#dinner">Dinner</a>
+  <a href="#desserts">Desserts</a>
+</nav>
+
+<div class="container" id="home">
+  <h2>Home</h2>
+  <p>Welcome to Super Recipes! Browse our delicious recipes below.</p>
+</div>
+
+<div class="container" id="breakfast">
+  <h2>Breakfast Recipes</h2>
+
+  <div class="recipe" style="background-image: url('pancakes.jpg');">
+
+    <h3>Fluffy Pancakes</h3>
+    <p><strong>Ingredients:</strong> Flour, Milk, Eggs, Baking Powder, Sugar, Salt, Butter</p>
+    <p><strong>Instructions:</strong> Mix dry ingredients, then add wet ingredients. Cook on a greased skillet until golden brown on both sides.</p>
+    <p><strong>Cooking Time:</strong> 20 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+  </div>
+
+  <div class="recipe" style="background-image: url('omelette.jpg');">
+
+    <h3>Cheese Omelette</h3>
+    <p><strong>Ingredients:</strong> Eggs, Cheese, Salt, Pepper, Butter</p>
+    <p><strong>Instructions:</strong> Beat eggs with salt and pepper, pour into a hot skillet with melted butter. Add cheese, fold, and cook until set.</p>
+    <p><strong>Cooking Time:</strong> 10 minutes</p>
+    <p><strong>Servings:</strong> 1</p>
+  </div>
+
+</div>
+
+<div class="container" id="lunch">
+  <h2>Lunch Recipes</h2>
+
+  <div class="recipe" style="background-image: url('sandwich.jpg');">
+
+    <h3>Grilled Chicken Sandwich</h3>
+    <p><strong>Ingredients:</strong> Chicken Breast, Bread, Lettuce, Tomato, Cheese, Mayonnaise, Mustard</p>
+    <p><strong>Instructions:</strong> Grill chicken, assemble sandwich with desired toppings.</p>
+    <p><strong>Cooking Time:</strong> 15 minutes</p>
+    <p><strong>Servings:</strong> 1</p>
+  </div>
+
+  <div class="recipe" style="background-image: url('salad.jpg');">
+
+    <h3>Greek Salad</h3>
+    <p><strong>Ingredients:</strong> Lettuce, Tomatoes, Cucumbers, Red Onion, Feta Cheese, Olives, Olive Oil, Lemon Juice, Salt, Pepper</p>
+    <p><strong>Instructions:</strong> Chop vegetables and mix with crumbled feta cheese and olives. Dress with olive oil, lemon juice, salt, and pepper.</p>
+    <p><strong>Cooking Time:</strong> 10 minutes</p>
+    <p><strong>Servings:</strong> 2</p>
+  </div>
+
+</div>
+
+<div class="container" id="dinner">
+  <h2>Dinner Recipes</h2>
+
+  <div class="recipe" style="background-image: url('pasta.jpg');">
+
+    <h3>Spaghetti Bolognese</h3>
+    <p><strong>Ingredients:</strong> Spaghetti, Ground Beef, Tomato Sauce, Onion, Garlic, Italian Seasoning, Salt, Pepper</p>
+    <p><strong>Instructions:</strong> Cook spaghetti according to package instructions. Brown beef with onion and garlic, add tomato sauce and seasoning. Serve over spaghetti.</p>
+    <p><strong>Cooking Time:</strong> 30 minutes</p>
+    <p><strong>Servings:</strong> 4</p>
+  </div>
+
+  <div class="recipe" style="background-image: url('stir-fry.jpg');">
+
+    <h3>Vegetable Stir Fry</h3>
+    <p><strong>Ingredients:</strong> Mixed Vegetables, Soy Sauce, Garlic, Ginger, Oil</p>
+    <p><strong>Instructions:</strong> Heat oil, add garlic and ginger, then vegetables. Stir-fry until tender-crisp, then add soy sauce.</p>
+    <p><strong>Cooking Time:</strong> 15 minutes</p>
+    <p><strong>Servings:</strong> 2</p>
+  </div>
+
+</div>
+
+<div class="container" id="desserts">
+  <h2>Dessert Recipes</h2>
+
+  <div class="recipe" style="background-image: url('cake.jpg');">
+
+    <h3>Chocolate Cake</h3>
+    <p><strong>Ingredients:</strong> Flour, Sugar, Cocoa Powder, Baking Powder, Baking Soda, Eggs, Milk, Oil, Vanilla Extract</p>
+    <p><strong>Instructions:</strong> Mix dry ingredients, then add wet ingredients. Bake in a preheated oven at 350°F (180°C) for 30-35 minutes.</p>
+    <p><strong>Cooking Time:</strong> 35 minutes</p>
+    <p><strong>Servings:</strong> 8</p>
+  </div>
+
+  <div class="recipe" style="background-image: url('cookies.jpg');">
+
+    <h3>Chocolate Chip Cookies</h3>
+    <p><strong>Ingredients:</strong> Flour, Butter, Sugar, Brown Sugar, Eggs, Vanilla Extract, Baking Soda, Salt, Chocolate Chips</p>
+    <p><strong>Instructions:</strong> Cream butter and sugars, add eggs and vanilla. Mix dry ingredients, then stir into wet. Fold in chocolate chips, then bake.</p>
+    <p><strong>Cooking Time:</strong> 10 minutes</p>
+    <p><strong>Servings:</strong> 24</p>
+  </div>
+
+</div>
+
+<script>
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+  }
+</script>
+
+</body>
+</html>
