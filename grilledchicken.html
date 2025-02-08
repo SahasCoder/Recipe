@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.jpg">
+    <title>Grilled Chicken Sandwich Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('sandwich.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffffb2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #666;
+            margin-top: 15px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        ol.instructions {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                background-size: cover;
+            }
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            p, ul, ol {
+                font-size: 0.9em;
+            }
+            ol.instructions {
+                padding-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Grilled Chicken Sandwich Recipe</h1>
+        <h2>Ingredients:</h2>
+        <ul>
+            <li>Chicken Breast</li>
+            <li>Bread</li>
+            <li>Lettuce</li>
+            <li>Tomato</li>
+            <li>Cheese</li>
+            <li>Mayonnaise</li>
+            <li>Mustard</li>
+        </ul>
+        <h2>Instructions:</h2>
+        <ol class="instructions">
+            <li>
+                <h3>Preparing the Chicken</h3>
+                <ol>
+                    <li><strong>Step 1:</strong> Season the chicken breast with salt and pepper.</li>
+                    <li><strong>Step 2:</strong> Preheat the grill to medium-high heat.</li>
+                    <li><strong>Step 3:</strong> Grill the chicken breast for about 6-7 minutes on each side, or until fully cooked.</li>
+                </ol>
+            </li>
+            <li>
+                <h3>Assembling the Sandwich</h3>
+                <ol>
+                    <li><strong>Step 4:</strong> Toast the bread slices if desired.</li>
+                    <li><strong>Step 5:</strong> Spread mayonnaise and mustard on the bread slices.</li>
+                    <li><strong>Step 6:</strong> Place the grilled chicken breast on one slice of bread.</li>
+                    <li><strong>Step 7:</strong> Add lettuce, tomato slices, and cheese on top of the chicken.</li>
+                    <li><strong>Step 8:</strong> Top with the other slice of bread to complete the sandwich.</li>
+                </ol>
+            </li>
+        </ol>
+        <p><strong>Cooking Time:</strong> Approximately 15 minutes</p>
+        <p><strong>Servings:</strong> 1</p>
+    </div>
+</body>
+</html>
